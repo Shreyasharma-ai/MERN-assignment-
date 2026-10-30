@@ -1,0 +1,126 @@
+Assignment 4: Repository with at Least Three Meaningful Commits
+Objective
+
+To create a Git repository, organize HTML and CSS assignment files, and maintain a meaningful commit history using Git.
+
+Step 1: Configure Git
+
+Open your VS Code terminal and run these commands. Replace the name and email with your own Git identity.
+
+git config --global user.name "Shreya Sharma"
+git config --global user.email "your-email@example.com"
+
+To verify your configuration, run:
+
+git config --global --list
+Step 2: Create a Repository
+
+Navigate to your assignment folder using the terminal.
+
+For example, if you want to create the repository on your Desktop, run:
+
+cd "$HOME\Desktop"
+mkdir html-css-assignments
+cd html-css-assignments
+
+Initialize Git:
+
+git init
+git branch -M main
+
+What do these commands do?
+
+mkdir: Creates a new folder.
+cd: Opens the folder in the terminal.
+git init: Initializes a Git repository.
+git branch -M main: Names the current branch main.
+Step 3: Create the First Commit
+
+Create a README file to describe your project.
+
+"# HTML & CSS Assignments" | Out-File -Encoding utf8 README.md
+
+Add the file to Git:
+
+git add README.md
+
+Commit the changes:
+
+git commit -m "docs: add README with project overview"
+
+Commit 1: docs: add README with project overview
+
+Step 4: Add Assignment Files and Create the Second Commit
+
+Copy your assignment files into the html-css-assignments folder.
+
+For example, if your assignment files are stored in another folder, copy them into the repository using File Explorer or the appropriate PowerShell command.
+
+Make sure the files are inside the repository before proceeding.
+
+To check the files, run:
+
+dir
+
+Add your first five assignment files. The following command assumes the filenames match the patterns in your assignment instructions:
+
+git add 01-*.md 02-*.md 03-*.md 04-*.md 05-*.md
+
+Commit the changes:
+
+git commit -m "docs: add setup and git assignments (1-5)"
+
+Commit 2: docs: add setup and git assignments (1-5)
+
+Note: If your assignment files have different names or extensions, use their actual filenames in the git add command.
+
+Step 5: Add HTML Assignments and Create the Third Commit
+
+Add your HTML assignment files.
+
+git add 06-*.html 07-*.html 08-*.html 09-*.html 10-*.html
+
+Commit the changes:
+
+git commit -m "feat: add HTML basics assignments (6-10)"
+
+Commit 3: feat: add HTML basics assignments (6-10)
+
+If your HTML files use different names, replace these patterns with your actual filenames.
+
+Step 6: Verify Your Commit History
+
+Run:
+
+git log --oneline
+
+Your output should look similar to this:
+
+a1b2c3d feat: add HTML basics assignments (6-10)
+d4e5f6g docs: add setup and git assignments (1-5)
+h7i8j9k docs: add README with project overview
+
+The characters at the beginning of each line represent abbreviated commit IDs. Yours will be different.
+
+This output proves that your repository contains three meaningful commits.
+
+Good Git Commit Message Rules
+
+Follow these rules when creating commits:
+
+Use clear, concise descriptions.
+Use prefixes such as feat:, fix:, docs:, and style:.
+Describe one logical change per commit.
+Use imperative wording, such as add navbar, instead of added navbar.
+Expected Result
+
+After completing the assignment, you should have:
+
+A Git repository named html-css-assignments.
+A README.md file describing the project.
+Your HTML and CSS assignment files organized in the repository.
+At least three meaningful commits.
+A commit history visible through git log --oneline.
+Conclusion
+
+This assignment demonstrates how to create a Git repository, track files, make meaningful commits, and maintain a clear project history. Git helps developers track changes and manage their code throughout the development process.

@@ -1,0 +1,126 @@
+Assignment 3: Terminal Navigation Practice
+Step 1: Open VS Code and the terminal
+Open VS Code.
+Click Terminal in the top menu.
+Select New Terminal.
+
+Your terminal will open at the bottom of the screen.
+
+Step 2: Show your current folder
+
+Type:
+
+pwd
+
+Meaning: Displays your current working directory.
+
+Example output:
+
+Path
+----
+C:\Users\YourName
+
+Your actual path may be different.
+
+Step 3: Go to your home directory
+
+Type:
+
+cd ~
+
+Meaning: Takes you to your Windows user home directory.
+Step 4: Create the website folder and its subfolders
+
+Type:
+
+mkdir website
+
+Now enter the website folder:
+
+cd website
+
+Create the css and images folders:
+
+mkdir css
+mkdir images
+
+Your folder structure will now look like this:
+
+website/
+├── css/
+└── images/
+Step 5: Create the HTML and CSS files
+
+First, create index.html:
+
+New-Item index.html -ItemType File
+
+Next, create style.css inside the CSS folder:
+
+New-Item css/style.css -ItemType File
+
+Your folder structure should now look like this:
+
+website/
+|─ index.html
+├─ css/
+│   └-style.css
+└-- images/
+
+Step 6: Enter the CSS folder
+
+Type:
+
+cd css
+
+To check your current location, type:
+
+pwd
+
+Your path should end with:
+
+\website\css
+Step 7: Return to the website folder
+
+Type:
+
+cd ..
+
+Meaning: Moves you up one directory, from css to website.
+
+To verify, run:
+
+pwd
+
+Your path should now end with:
+
+\website
+Step 8: List all files and folders recursively
+
+Type:
+
+ls -Recurse
+
+Meaning: Displays the contents of the website folder, including items inside its subfolders.
+
+You should see index.html, css, style.css, and images.
+
+Step 9: Rename index.html to home.html
+
+Run:
+
+Rename-Item index.html home.html
+
+Now your HTML file is named home.html.
+
+Rename it back:
+
+Rename-Item home.html index.html
+
+Your file is now back to its original name.
+
+Step 10: Open the website folder in VS Code
+
+Type:
+
+code .
