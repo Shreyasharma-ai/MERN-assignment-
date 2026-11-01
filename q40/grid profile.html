@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shreya Sharma's portfolio showcasing her web development, programming and Artificial Intelligence projects.">
+  <meta name="author" content="Shreya Sharma">
+  <title>Grid Project – Shreya Sharma Portfolio</title>
+  <style>
+    :root {
+      --ink: #1a1a2e;
+      --paper: #fdfbf7;
+      --accent: #e94560;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+    body {
+      font-family: Georgia, serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    .layout {
+      display: grid;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 1.5rem;
+      padding: 1.5rem;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-areas:
+        "head head head head head head head head head head head head"
+        "hero hero hero hero hero hero hero about about about about about"
+        "p1 p1 p1 p2 p2 p2 p3 p3 p3 p4 p4 p4"
+        "skills skills skills skills skills skills contact contact contact contact contact contact"
+        "foot foot foot foot foot foot foot foot foot foot foot foot";
+    }
+    .head {
+      grid-area: head;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 3px double var(--ink);
+      padding-bottom: .75rem;
+    }
+    .head h1 {
+      font-size: 2.2rem;
+    }
+    .head nav a {
+      margin-left: 1rem;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .head nav a:hover {
+      color: var(--accent);
+    }
+    .hero {
+      grid-area: hero;
+      position: relative;
+      border-radius: 6px;
+      overflow: hidden;
+      min-height: 320px;
+    }
+    .hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero h2 {
+      position: absolute;
+      left: 1.5rem;
+      bottom: 1.5rem;
+      color: #fff;
+      font-size: 2rem;
+      text-shadow: 0 2px 8px #000;
+    }
+    .about {
+      grid-area: about;
+      background: var(--ink);
+      color: #fff;
+      padding: 1.5rem;
+      border-radius: 6px;
+    }
+    .about h2 {
+      color: var(--accent);
+      margin-bottom: .5rem;
+    }
+    .p1 {
+      grid-area: p1;
+    }
+    .p2 {
+      grid-area: p2;
+    }
+    .p3 {
+      grid-area: p3;
+    }
+    .p4 {
+      grid-area: p4;
+    }
+    .project {
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 6px;
+      background: #fff;
+    }
+    .project h3 {
+      color: var(--accent);
+      margin-bottom: .5rem;
+    }
+    .skills {
+      grid-area: skills;
+    }
+    .skills ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: .5rem;
+      list-style: none;
+      padding: 0;
+      margin-top: .5rem;
+    }
+    .skills li {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: .4rem;
+      text-align: center;
+      border-radius: 4px;
+    }
+    .contact {
+      grid-area: contact;
+      background: #fff0f3;
+      padding: 1.5rem;
+      border-radius: 6px;
+    }
+    .contact h2 {
+      margin-bottom: .5rem;
+    }
+    .contact a {
+      color: var(--ink);
+      font-weight: bold;
+    }
+    .foot {
+      grid-area: foot;
+      text-align: center;
+      border-top: 1px solid #ccc;
+      padding-top: 1rem;
+      font-size: .85rem;
+    }
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+          "head head"
+          "hero hero"
+          "about about"
+          "p1 p2"
+          "p3 p4"
+          "skills skills"
+          "contact contact"
+          "foot foot";
+      }
+    }
+    @media (max-width: 520px) {
+      .layout {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "head"
+          "hero"
+          "about"
+          "p1"
+          "p2"
+          "p3"
+          "p4"
+          "skills"
+          "contact"
+          "foot";
+      }
+      .head {
+        flex-direction: column;
+        gap: .5rem;
+      }
+      .head nav a {
+        margin-left: 0;
+        margin-right: .7rem;
+      }
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+      .skills ul {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+<header class="head">
+  <h1>Shreya Sharma</h1>
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+<section class="hero">
+  <img src="https://picsum.photos/id/1040/1000/600"
+    alt="Beautiful landscape">
+  <h2>Building the Future with AI & Technology.</h2>
+</section>
+<section class="about">
+  <h2>About Me</h2>
+  <p>
+    Hello! I am Shreya Sharma, a BCA (Artificial Intelligence)
+    student at Invertis University, Bareilly.
+    I am passionate about Artificial Intelligence,
+    programming and web development.
+    Currently, I am learning HTML, CSS, Python and Java
+    while improving my technical and problem-solving skills.
+  </p>
+</section>
+<article class="project p1" id="work">
+  <h3>Shopping Cart Management</h3>
+  <p>
+    A Python-based project that manages shopping cart
+    operations and helps users handle products and
+    shopping activities.
+  </p>
+</article>
+<article class="project p2">
+  <h3>Food Delivery System</h3>
+  <p>
+    A Python project designed to manage food ordering
+    and delivery operations through a simple system.
+  </p>
+</article>
+<article class="project p3">
+  <h3>ORCA Marine AI</h3>
+  <p>
+    An AI-based marine ecosystem project that uses
+    satellite and oceanographic data to provide
+    useful marine insights.
+  </p>
+</article>
+<article class="project p4">
+  <h3>Movie Review Classification</h3>
+  <p>
+    An NLP and machine learning project that processes
+    movie reviews to classify their sentiment as
+    positive or negative.
+  </p>
+</article>
+<section class="skills" id="skills">
+  <h2>Technical Skills</h2>
+  <ul>
+    <li>HTML5</li>
+    <li>CSS3</li>
+    <li>Python</li>
+    <li>Power BI</li>
+    <li>Java</li>
+    <li>Git & GitHub</li>
+    <li>Artificial Intelligence</li>
+    <li>Machine Learning</li>
+    <li>CSS Grid</li>
+  </ul>
+</section>
+<section class="contact" id="contact">
+  <h2>Contact Me</h2>
+  <p>
+    Interested in technology, AI and web development?
+    Let's connect!
+  </p>
+  <p>
+    🎓 BCA (Artificial Intelligence)<br>
+    🏫 Invertis University, Bareilly<br>
+    💻 GitHub:
+    <a href="https://github.com/Shreyasharma-ai"
+      target="_blank" rel="noopener noreferrer">
+      Visit My GitHub
+    </a>
+  </p>
+</section>
+<footer class="foot">
+  &copy; 2026 Shreya Sharma | All Rights Reserved.
+</footer>
+  </div>
+</body>
+</html>
